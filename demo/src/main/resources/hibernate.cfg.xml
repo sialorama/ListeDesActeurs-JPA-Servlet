@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- JDBC Database connection settings -->
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property><!-- ou son nouveau nom com.mysql.cj.jdbc.Driver -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/cinema</property>
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
@@ -18,7 +18,7 @@
         <property name="hibernate.dbcp.maxWaitMillis">-1</property-->
 
         <!-- Select our SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>
 
         <!-- Echo the SQL to stdout -->
         <property name="show_sql">true</property>
@@ -35,9 +35,8 @@
 
 
         <!-- Enities to map -->
-        <mapping class="org.demo.entity.Acteur" />
-        <mapping class="org.demo.entity.Genre" />
-        <mapping class="org.demo.entity.Film" />
+        <mapping class="org.demo.model.Acteur" />
+        <mapping class="org.demo.model.Film" />
 
     </session-factory>
 
